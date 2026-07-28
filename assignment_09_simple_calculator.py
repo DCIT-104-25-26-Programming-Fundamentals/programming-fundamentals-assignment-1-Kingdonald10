@@ -68,3 +68,60 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+from unittest import result
+
+
+def addition(a, b):
+    return a + b
+def subtraction(a, b):
+    return a - b
+def multiplication(a, b):
+    return a * b
+def division(a, b):
+    if b == 0:
+        return "Error: Cannot divide by zero."
+    else:
+        return round(a / b, 2)
+def modulus(a, b):
+    if b == 0:
+        return "Error: Cannot perform modulus by zero."
+    else:
+        return a % b
+def exponentiation(a, b):
+    return a ** b
+    while True:
+        print("\n============================")
+        print("     SIMPLE CALCULATOR")
+        print("============================")
+        print("1. Addition")
+        print("2. Subtraction")
+        print("3. Multiplication")
+        print("4. Division")
+        print("5. Modulus")
+        print("6. Exponentiation")
+        print("7. Quit")
+        choice = input("Select an operation (1-7): ")
+        if choice == "7":
+            print("Goodbye!")
+            break
+
+        if choice in ["1", "2", "3", "4", "5", "6"]:
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
+
+    if choice == "1":
+        print("Result:", num1, "+", num2, "=", addition(num1, num2))
+    elif choice == "2":
+        print("Result:", num1, "-", num2, "=", subtraction(num1, num2))
+    elif choice == "3":
+        print("Result:", num1, "*", num2, "=", multiplication(num1, num2))
+    elif choice == "4":
+        result = division(num1, num2)
+        print("Result:", num1, "/", num2, "=", result)
+    elif choice == "5":
+        result = modulus(num1, num2)
+        print("Result:", num1, "%", num2, "=", result)
+    elif choice == "6":
+        print("Result:", num1, "**", num2, "=", exponentiation(num1, num2))
+    else :
+        print("Invalid choice. Please try again.")
